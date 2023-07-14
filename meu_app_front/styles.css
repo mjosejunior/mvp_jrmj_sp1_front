@@ -1,0 +1,166 @@
+/* Estilo básico */
+body,
+ul,
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Estilos compartilhados para o cabeçalho e o banner */
+header,
+.banner {
+    text-align: center;
+   
+
+}
+
+/* Estilos específicos para o banner */
+.banner img {
+    max-width: 860px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+.banner h1 {
+    font-size: 1.5em;
+}
+
+/* Estilos para o formulário de atividades */
+#activity-form {
+    max-width: 860px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Estilos para label e input dentro do formulário */
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para botão dentro do formulário */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4a6da7;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Estilos para a tabela */
+table {
+    max-width: 840px;
+    padding: 10px;
+    width: 100%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+@media screen and (max-width: 810px) {
+
+    /* Fazendo a tabela responsiva para dispositivos móveis */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label, input, button {
+        width: 100%;
+
+    }
+
+    button {
+        margin-top: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    td {
+        border: 1px solid #ddd;
+
+
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        /* Adicionando borda na parte inferior das células */
+    }
+
+    tr {
+        border: 1px solid #ddd;
+        /* Adicionando borda nas linhas */
+        margin-bottom: 10px;
+    }
+
+
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4a6da7;
+    cursor: pointer;
+    font-size: 1.2em;
+}

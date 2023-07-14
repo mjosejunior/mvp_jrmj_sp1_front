@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Controle de Atividades</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <div class="banner">
+        <img src="https://cdn.discordapp.com/attachments/1089415230972502058/1126741132081102939/matosjunior_A_scene_from_a_library._A_man_works_hard_and_wants__70d28cc6-22c2-42eb-b959-b6ee926b9312.png"
+            alt="Imagem de Um homem trabalhando em uma biblioteca" />
+        <h1>CONTROLE DE ATIVIDADES</h1>
+    </div>
+
+    <!-- Formulário para inserir as atividades -->
+    <form id="activity-form">
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+        <label for="start_time">Hora de Início:</label>
+        <input type="time" id="start_time" required onchange="calculateDuration()">
+        <label for="end_time">Hora de Fim:</label>
+        <input type="time" id="end_time" required onchange="calculateDuration()">
+        <label for="duracao">Duração:</label>
+        <!-- Campo desabilitado para exibir a duração calculada -->
+        <input type="text" id="duracao" disabled min="0" required>
+        <label for="publicacoes">Publicações:</label>
+        <input type="number" id="publicacoes" min="0" required>
+        <label for="videos">Vídeos:</label>
+        <input type="number" id="videos" min="0" required>
+        <label for="revisitas">Revisitas:</label>
+        <input type="number" id="revisitas" min="0" required>
+        <label for="estudos">Estudos:</label>
+        <input type="number" id="estudos" min="0" required>
+        <!-- Botão para submeter o formulário -->
+        <button class="button" type="submit" onclick="newItem()">Submeter</button>
+        <!-- Botão para limpar o formulário -->
+        <button class="button" type="button" onclick="clearForm()">Limpar</button>
+    </form>
+
+    <!-- Tabela com items existentes -->
+    <section class="items">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Data</th>
+                    <th>Hora de Início</th>
+                    <th>Hora de Fim</th>
+                    <th>Duração</th>
+                    <th>Publicações</th>
+                    <th>Vídeos</th>
+                    <th>Revisitas</th>
+                    <th>Estudos</th>
+                    <th>Excluir</th>
+                    <th>Editar</th>
+                    <th>Obs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As linhas da tabela serão preenchidas aqui -->
+            </tbody>
+        </table>
+    </section>
+    <div id="observacaoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="observacao-form">
+                <label for="observacao-texto">Observação:</label>
+                <input type="text" id="observacao-texto" name="texto" required>
+                <input type="submit" value="Adicionar" class="modal-button">
+            </form>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
